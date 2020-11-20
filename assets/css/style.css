@@ -1,0 +1,38 @@
+body{
+  background-color: #E4E4E4;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.kArrondir{
+  border-radius: 30px;
+}
+
+.kBg-drop{
+  background-color: #9F9A9A;
+  opacity: 0.9;
+}
+
+.kHover:hover{
+  background-color: #FF8103;
+}
+
+.kBoutton-menu{
+  width: 267px;
+  height: 184px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  border-radius: 30px;
+  margin: 3px;
+}
+
+.kColor-text{
+  color: #FF8103;
+}
+
+.kArriere-plan{
+  background-color: #FF8103;
+}
