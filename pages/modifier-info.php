@@ -1,20 +1,22 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <p>
+<div class="container-fluid mt-2">
+    <div class="row my-5">
+        <div class="col-md-3">
+            <p class="">
                 <a href="?p=home">
-                    <img src="assets/images/logo-stg.png" class="img-fluid" alt="">
+                    <img src="assets/images/icon-parametre/icon-parametre.png" alt="" class="img-fluid">
                 </a>
             </p>
         </div>
-        <div class="col-md-4 ">
-            <h3 class="text-center kColor-text">Inscription</h3>
-            <div class="kArrondir border border-secondary shadow p-4" style="height:100%;">
-                <p>
-                    <img class="img-fluid" src="assets/images/inscription.png" alt="">
-                </p>
+        <div class="col-md-6">
+            <div class="kArrondir border border-secondary shadow p-4" style=" height:100%; background-color:#707070;">
+                <div class="d-flex justify-content-center">
+                    <div class="shadow mb-3 pl-4 pr-4 p-2 border kArrondir text-center kColor-text"
+                        style="background:#E4E4E4;">
+                        Modifier vos informations
+                    </div>
+                </div>
                 <form>
-                    <div class="form-group mb-3">
+                    <div class=" form-group mb-3">
                         <input type="text" class="form-control kArrondir shadow" placeholder="Nom">
                     </div>
 
@@ -33,15 +35,15 @@
                     <div class="form-group mb-3">
                         <input type="text" class="form-control kArrondir shadow" placeholder="Mot de passe">
                     </div>
-                    <div class="form-group mb-3 justify-content-end float-right">
+                    <div class="form-group mb-3 float-right">
                         <input type="submit" style=""
                             class="form-control  kArrondir shadow border d-block text-white kArriere-plan"
-                            value="Je m'inscris">
+                            value="Terminer">
                     </div>
 
                 </form>
             </div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-3"></div>
     </div>
 </div>
