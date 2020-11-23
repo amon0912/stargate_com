@@ -24,8 +24,8 @@ $(document).ready(function () {
     }
 
 
-    $('.kBoutton-menu').css('height', '184px')
-    $('.kBoutton-menu').css('width', '267px')
+    // $('.kBoutton-menu').css('height', '184px')
+    // $('.kBoutton-menu').css('width', '267px')
 
 
     // preview
@@ -38,7 +38,5 @@ $(document).ready(function () {
     $('.slick-next').html('<i class="fas fa-arrow-circle-right    "></i>')
 
     // console.log(window.screen.width);
-
-
  
 });

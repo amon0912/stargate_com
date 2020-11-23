@@ -8,18 +8,17 @@
 
     <div class="carousel-inner">
         <?php
-        $slide = scandir("assets/images/slider");
-        
+        $slide = scandir("assets/images/slider", 1);
+        // var_export($slide);
         foreach ($slide as $key => $value) {
-        if ($value != '.' && $value != '..') { ?>
+        if ($value != '.' && $value != '..' && $value != '.DS_Store') { ?>
 
-        <div class="carousel-item <?= ($key=='2')?'active':''?>">
+        <div class="carousel-item <?= ($key=='1')?'active':''?>">
             <img class="d-block w-100 kArrondir " src="assets/images/slider/<?= $value ?>" alt="">
             <div class="carousel-caption d-none d-md-block">
             </div>
         </div>
         <?php 
-        
         }
     } ?>
     </div>

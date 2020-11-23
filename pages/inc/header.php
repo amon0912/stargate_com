@@ -44,7 +44,9 @@
                             </div>
                             <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
-                                        class="dropdown-item kArrondir text-white kHover" href="#">Voir votre panier</a>
+                                        class="dropdown-item kArrondir text-white kHover"
+                                        href="?p=voir-votre-panier">Voir votre
+                                        panier</a>
                                 </li>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center">
                                     <a class="dropdown-item kArrondir text-white kHover" href="#">Modifier votre

@@ -1,36 +1,38 @@
 <div class="container-fluid pb-3 pt-3" style="border-left:8px solid #FF8103">
-    <div class="menu-caro d-flex ">
+    <div class="menu-caro d-flex">
         <a class="kBoutton-menu text-decoration-none" href="">
-            <!-- <p class="text-center kColor-text" style="margin-top:30%">
-                ACCUEIL
-            </p> -->
-            <p class="text-center">
-                <img src="assets/images/icon-menu/welcome.png" class="img-fluid kArrondir" alt="icon menu">
+            <p class="text-center pt-2">
+                <img src="assets/images/icon-menu/new-welcome.png" class="img-fluid kArrondir h-100 w-100" style=""
+                    alt="icon menu">
+            </p>
+        </a>
+        <a class="kBoutton-menu text-decoration-none" href="">
+            <p class="text-center pt-2">
+                <img src="assets/images/icon-menu/new-dev.png" class="img-fluid kArrondir h-100 w-100" alt="icon menu">
             </p>
         </a>
         <a class="kBoutton-menu text-decoration-none" href="">
             <p class="text-center">
-                <img src="assets/images/icon-menu/dev.png" class="img-fluid kArrondir" alt="icon menu">
+                <img src="assets/images/icon-menu/new-print.png" class="img-fluid kArrondir h-100 w-100"
+                    alt="icon menu">
             </p>
         </a>
         <a class="kBoutton-menu text-decoration-none" href="">
-            <p class="text-center">
-                <img src="assets/images/icon-menu/print.png" class="img-fluid kArrondir" alt="icon menu">
+            <p class="text-center pt-2">
+                <img src="assets/images/icon-menu/new-offre-du-jour.png" class="img-fluid kArrondir h-100 w-100"
+                    alt="icon menu">
             </p>
         </a>
         <a class="kBoutton-menu text-decoration-none" href="">
-            <p class="text-center">
-                <img src="assets/images/icon-menu/offre-du-jour.png" class="img-fluid kArrondir" alt="icon menu">
+            <p class="text-center pt-2">
+                <img src="assets/images/icon-menu/new-formation.png" class="img-fluid kArrondir h-100 w-100"
+                    alt="icon menu">
             </p>
         </a>
         <a class="kBoutton-menu text-decoration-none" href="">
-            <p class="text-center">
-                <img src="assets/images/icon-menu/formation.png" class="img-fluid kArrondir" alt="icon menu">
-            </p>
-        </a>
-        <a class="kBoutton-menu text-decoration-none" href="">
-            <p class="text-center">
-                <img src="assets/images/icon-menu/nos-realisations.png" class="img-fluid kArrondir" alt="icon menu">
+            <p class="text-center pt-2">
+                <img src="assets/images/icon-menu/new-nos-realisations.png" class="img-fluid kArrondir h-100 w-100"
+                    alt="icon menu">
             </p>
         </a>
 

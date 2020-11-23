@@ -79,6 +79,7 @@
     <?php
     if ($p == 'home') { ?>
     <script src="assets/js/<?= $p ?>.js"></script>
+    <script src="assets/js/caro-offres-et-formations.js"></script>
     <?php }
     ?>
 </body>
