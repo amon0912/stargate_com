@@ -1,5 +1,5 @@
 <?php
-if (!empty($_GET['p'])&& $_GET['p']=='je-profite-de-loffre' && !empty($_GET['offre'])) {
+if (!empty($_GET['p']) && $_GET['p']=='je-profite-de-loffre' && !empty($_GET['offre'])) {
     $offres=scandir('assets/images/offres', 1); if ( in_array($_GET['offre'], $offres) ) { 
         $myOffre = $_GET['offre']; 
     }
@@ -14,7 +14,7 @@ if (!empty($_GET['p'])&& $_GET['p']=='je-profite-de-loffre' && !empty($_GET['off
                     alt="">
             </p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="lien">
             <h3 class="text-center kColor-text">Bon de reduction</h3>
             <div class="kArrondir border border-secondary shadow p-4" style="height:100%;">
                 <p class="text-center">

@@ -42,7 +42,7 @@
 
 
     <?php
-    if ($p === 'home') { ?>
+    if ($p === 'home' || $p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' ) { ?>
     <!-- en tete -->
     <?php include('pages/inc/header.php') ?>
 
@@ -78,10 +78,17 @@
     <!-- <script src="assets/js/footer.js"></script> -->
     <?php
     if ($p == 'home') { ?>
+
     <script src="assets/js/<?= $p ?>.js"></script>
     <script src="assets/js/caro-offres-et-formations.js"></script>
+
+    <?php } else if ($p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations'){ ?>
+
+    <script src="assets/js/caro-offres-et-formations.js"></script>
+
     <?php }
     ?>
+
 </body>
 
 </html>
