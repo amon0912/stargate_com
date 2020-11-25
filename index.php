@@ -11,6 +11,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card-print.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <title>Stargate Communication</title>
 </head>
@@ -75,9 +76,9 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/menu-caro.js"></script>
 
-    <!-- <script src="assets/js/footer.js"></script> -->
+
     <?php
-    if ($p == 'home') { ?>
+    if ($p === 'home') { ?>
 
     <script src="assets/js/<?= $p ?>.js"></script>
     <script src="assets/js/caro-offres-et-formations.js"></script>
@@ -87,6 +88,19 @@
     <script src="assets/js/caro-offres-et-formations.js"></script>
 
     <?php }
+    ?>
+
+    <!-- pour le card print -->
+    <?php
+    if ($p === 'new-print') {
+        echo '
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous"></script>
+        
+        <script src="assets/js/card-print.js"></script>
+        ';
+    }
     ?>
 
 </body>

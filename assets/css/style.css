@@ -10,6 +10,10 @@ body{
   background-color: #9F9A9A;
 }
 
+.kArriere-plan-gris-2{
+  background-color:#707070;
+}
+
 .kArrondir{
   border-radius: 30px;
 }
