@@ -13,6 +13,21 @@
                             placeholder="Décrivez votre application ..."></textarea>
                     </div>
 
+                    <div class="form-group mt-2">
+                        <input id="my-input" class="form-control kArrondir" type="file" name="" placeholder="">
+                        <small id="helpId" class="text-white">Envoyez votre documentation format ( words , Pdf, )
+                        </small>
+                    </div>
+                    <div class="form-group mt-2">
+                        <input id="my-input" class="form-control kArrondir" type="text" name=""
+                            placeholder="Nom de domaine ( www.votreentreprise.com,net,ci,org)">
+                    </div>
+                    <div class="form-group mt-4">
+                        <input id="my-input" class="form-control kArrondir" type="file" name="" placeholder="">
+                        <small id="helpId" class="text-white">logo et image
+                        </small>
+                    </div>
+
                     <!-- <div class=" float-right my-5">
                         <input class=" border-0 kArrondir kArriere-plan text-white pl-4 pr-4 p-2" type="submit"
                             value="Suivant">
@@ -21,7 +36,7 @@
                     <div class=" mt-5">
                         <a href="?p=fin-devis" class=" text-decoration-none">
                             <div class=" foat-right border d-inline kArrondir kArriere-plan text-white pl-4 pr-4 p-2">
-                                Suivant
+                                Envoyez
                             </div>
                         </a>
                     </div>

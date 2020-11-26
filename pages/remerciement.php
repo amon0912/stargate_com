@@ -6,7 +6,7 @@
         <div class="col-md-4">
             <div class="kArrondir border pt-0 m-0 pl-3 pr-3" style="background:#9F9A9A">
 
-                <p class="text-center m-0 p-0"><img src="assets/images/felicitation.png" alt=""></p>
+                <p class="text-center m-0 p-0"><img class="img-fluid" src="assets/images/felicitation.png" alt=""></p>
 
                 <div class="mb-5 text-white m-3" style="font-size:18px;font-weight:bold;">
                     Félicitations vous venez de bénéficier

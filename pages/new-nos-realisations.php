@@ -10,20 +10,20 @@
         <!-- slide -->
         <div class="col-md-9 mt-3" id="new-developpement">
             <div class="kArriere-plan kArrondir p-2" style="height:100%">
-                <h2 class="text-center mt-3">Print - Impression</h2>
+                <h2 class="text-center mt-3">Nos réalisations</h2>
                 <div class="row m-2 my-5 flex-row align-items-center justify-content-center">
                     <?php
-                    $tab = ['affiche_publicitaire' , 'faire_part', 'dépliant' , 'papier_entête' , 'tee-shirt', 'flyers' , 'carte_de_visite' , 'bâche_numérique' ];
+                    $tab = ['site_web', 'application_mobile', 'infographie' ];
                     // var_export($tab);
                     foreach($tab as $i => $item ){ ?>
                     <div class="col-md-4 mb-3">
                         <div class=" card w-100 kArrondir p-4">
-                            <a href="?p=detail-print&detail-print=<?=$item?>" class="text-decoration-none">
+                            <a href="?p=detail-realisation&detail-realisation=<?=$item?>" class="text-decoration-none">
                                 <div class=" card-body text-center kHover kArrondir">
-                                    <h5 class="card-title ">Print</h5>
+                                    <h5 class="card-title ">Nos réalisations</h5>
 
                                     <?php
-                                        echo '<p><img class="img-fluid" src="assets/images/icon-for-print/'.$item.'.png"></p>';
+                                        echo '<p><img class="img-fluid" src="assets/images/icon-for-realisation/'.$item.'.png"></p>';
                                     ?>
 
                                     <p class="card-text text-capitalize font-weight-bold">

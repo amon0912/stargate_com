@@ -10,17 +10,17 @@
         <!-- slide -->
         <div class="col-md-9 mt-3" id="new-developpement">
             <div class="kArriere-plan kArrondir p-2" style="height:100%">
-                <h2 class="text-center mt-3">Print - Impression</h2>
+                <h2 class="text-center mt-3">Formation</h2>
                 <div class="row m-2 my-5 flex-row align-items-center justify-content-center">
                     <?php
-                    $tab = ['affiche_publicitaire' , 'faire_part', 'dépliant' , 'papier_entête' , 'tee-shirt', 'flyers' , 'carte_de_visite' , 'bâche_numérique' ];
+                    $tab = [ ];
                     // var_export($tab);
                     foreach($tab as $i => $item ){ ?>
                     <div class="col-md-4 mb-3">
                         <div class=" card w-100 kArrondir p-4">
                             <a href="?p=detail-print&detail-print=<?=$item?>" class="text-decoration-none">
                                 <div class=" card-body text-center kHover kArrondir">
-                                    <h5 class="card-title ">Print</h5>
+                                    <h5 class="card-title ">Formation</h5>
 
                                     <?php
                                         echo '<p><img class="img-fluid" src="assets/images/icon-for-print/'.$item.'.png"></p>';

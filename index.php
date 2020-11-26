@@ -11,7 +11,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/card-print.css">
+
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <title>Stargate Communication</title>
 </head>
@@ -43,7 +43,7 @@
 
 
     <?php
-    if ($p === 'home' || $p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' ) { ?>
+    if ($p === 'home' || $p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' || $p === 'detail-print' || $p === 'detail-realisation' ) { ?>
     <!-- en tete -->
     <?php include('pages/inc/header.php') ?>
 
@@ -52,6 +52,7 @@
 
     <!-- Banner -->
     <?php include('pages/inc/banner.php') ?>
+
 
     <?php include('pages/' . $p . '.php'); ?>
 
@@ -83,25 +84,13 @@
     <script src="assets/js/<?= $p ?>.js"></script>
     <script src="assets/js/caro-offres-et-formations.js"></script>
 
-    <?php } else if ($p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations'){ ?>
+    <?php } else if ($p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' || $p === 'detail-print' || $p === 'detail-realisation'){ ?>
 
     <script src="assets/js/caro-offres-et-formations.js"></script>
 
     <?php }
     ?>
 
-    <!-- pour le card print -->
-    <?php
-    if ($p === 'new-print') {
-        echo '
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-        crossorigin="anonymous"></script>
-        
-        <script src="assets/js/card-print.js"></script>
-        ';
-    }
-    ?>
 
 </body>
 
