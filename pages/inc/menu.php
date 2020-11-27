@@ -23,7 +23,7 @@
                     alt="icon menu">
             </p>
         </a>
-        <a class="kBoutton-menu text-decoration-none" href="?p=new-formation">
+        <a class="kBoutton-menu text-decoration-none" href="?p=new-formation#new-formation">
             <p class="text-center pt-2">
                 <img src="assets/images/icon-menu/new-formation.png" class="img-fluid kArrondir h-100 w-100"
                     alt="icon menu">

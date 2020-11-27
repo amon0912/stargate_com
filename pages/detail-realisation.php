@@ -13,7 +13,7 @@
                 <?php
                 if (empty($_GET['detail-realisation'])) {
                     echo 'Vide !';
-                } else { ?>
+                } else if (!empty($_GET['detail-realisation']) && $_GET['detail-realisation'] === 'site_web' ) { ?>
 
                 <div class="kArrondir col-md-6 ">
                     <iframe class=" kArrondir m-0 p-0" src="https://www.ivoiredecoplus.com" height="700" width="100%"
@@ -27,66 +27,77 @@
                     <iframe class=" kArrondir m-0 p-0" src="https://www.ahiezercompagnie.ci" height="700" width="100%"
                         frameborder=" 0" allowfullscreen></iframe>
                 </div>
+                <?php }  else if (!empty($_GET['detail-realisation']) && $_GET['detail-realisation'] === 'application_mobile' ) { ?>
+
+                <div class="kArrondir col-md-6 ">
+                    <iframe class=" kArrondir m-0 p-0" src="https://www.ivoiredecoplus.com" height="700" width="100%"
+                        frameborder=" 0" allowfullscreen></iframe>
+                </div>
+                <div class=" kArrondir col-md-6 ">
+                    <iframe class=" kArrondir m-0 p-0" src="http://apotrebiry.com" height="700" width="100%"
+                        frameborder=" 0" allowfullscreen></iframe>
+                </div>
+                <div class=" kArrondir col-md-6 ">
+                    <iframe class=" kArrondir m-0 p-0" src="https://www.ahiezercompagnie.ci" height="700" width="100%"
+                        frameborder=" 0" allowfullscreen></iframe>
+                </div>
+                <?php }  else if (!empty($_GET['detail-realisation']) && $_GET['detail-realisation'] === 'infographie' ) { ?>
+                <?php
+                $affiches = scandir("assets/images/infographie/affiche_publicitaire", 1);
+                $cartes = scandir("assets/images/infographie/carte_de_visite", 1);
+                $flyers = scandir("assets/images/infographie/flyers", 1);
+                $logos = scandir("assets/images/infographie/logo", 1);
+                
+                ?>
+
+                <h3>Affiche publicitaire</h3>
+                <?php
+                foreach($affiches as $affiche){ 
+                    if($affiche !='.' && $affiche !='..'){
+                ?>
+                <div class="kArrondir col-md-4 mb-3">
+                    <img src="assets/images/infographie/affiche_publicitaire/<?= $affiche ?>"
+                        class="img-fluid kArrondir" alt="">
+                </div>
+                <?php } }
+                ?>
+                <h3>Carte de visite</h3>
+                <?php
+                foreach($cartes as $carte){ 
+                    if($carte !='.' && $carte !='..'){
+                ?>
+                <div class="kArrondir col-md-4 mb-3">
+                    <img src="assets/images/infographie/carte_de_visite/<?= $carte ?>" class="img-fluid kArrondir"
+                        alt="">
+                </div>
+                <?php } }
+                ?>
+                <h3>Flyers</h3>
+                <?php
+                foreach($flyers as $flyer){ 
+                    if($flyer !='.' && $flyer !='..'){
+                ?>
+                <div class="kArrondir col-md-4 mb-3">
+                    <img src="assets/images/infographie/flyers/<?= $flyer ?>" class="img-fluid kArrondir" alt="">
+                </div>
+                <?php } }
+                ?>
+
+                <h3>Logo</h3>
+                <?php
+                foreach($logos as $logo){ 
+                    if($logo !='.' && $logo !='..'){
+                ?>
+                <div class="kArrondir col-md-4 mb-3">
+                    <img src="assets/images/infographie/logo/<?= $logo ?>" class="img-fluid kArrondir" alt="">
+                </div>
+                <?php } }
+                ?>
+
+
                 <?php } ?>
 
             </div>
         </div>
     </div>
 </div>
-
-<!-- Modal flyers -->
-<?php 
-
-if (empty($_GET['detail-print'])) {
-    // echo 'Vide !';
-} else {
-    # code...
-$details_print=$_GET['detail-print'];
-// $details_print='offres';
-$chemin= 'assets/images/' . $details_print;
-
-$kOffres = scandir($chemin, 1);
-$j=0;
-
-
-foreach($kOffres as $keykOffres => $valuekOffres){
-    if($valuekOffres != '.' && $valuekOffres != '..'){ 
-?>
-
-<div class="modal fade" id="<?= $details_print . ++$j ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content kArriere-plan kArrondir">
-            <!-- <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-            </div> -->
-            <div class="modal-body">
-                <form>
-
-                    <input hidden="<?= $details_print . $j ?>" type="text" name="">
-
-                    <?php 
-                    if($details_print === 'carte_de_visite'){
-                        include('pages/inc/form/carte_de_visite.php');   
-                    } else {
-                        include('pages/inc/form/flyers.php');   
-                    }
-                    ?>
-                    <button type="submit"
-                        class="btn bg-white float-right  mt-2 kArrondir kColor-text font-weight-bold">Envoyez</button>
-                </form>
-            </div>
-            <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div> -->
-        </div>
-    </div>
-</div>
-
-<?php 
-    }
-}
-}
-?>

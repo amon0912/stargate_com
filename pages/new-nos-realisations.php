@@ -10,7 +10,7 @@
         <!-- slide -->
         <div class="col-md-9 mt-3" id="new-developpement">
             <div class="kArriere-plan kArrondir p-2" style="height:100%">
-                <h2 class="text-center mt-3">Nos réalisations</h2>
+                <h2 class="text-center mt-3 text-white">Nos réalisations</h2>
                 <div class="row m-2 my-5 flex-row align-items-center justify-content-center">
                     <?php
                     $tab = ['site_web', 'application_mobile', 'infographie' ];

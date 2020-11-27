@@ -3,7 +3,7 @@
 
         <!-- offre du jour  -->
         <div class="col-md-3 mt-3">
-            <h3>Formation</h3>
+            <h3 class="">Formation</h3>
             <?php include('inc/formation-slide.php'); ?>
         </div>
 

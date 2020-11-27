@@ -10,7 +10,7 @@
         <!-- slide -->
         <div class="col-md-9 mt-3" id="new-developpement">
             <div class="kArriere-plan kArrondir p-2" style="height:100%">
-                <h2 class="text-center mt-3">Print - Impression</h2>
+                <h2 class="text-center mt-3 text-white">Print - Impression</h2>
                 <div class="row m-2 my-5 flex-row align-items-center justify-content-center">
                     <?php
                     $tab = ['affiche_publicitaire' , 'faire_part', 'dépliant' , 'papier_entête' , 'tee-shirt', 'flyers' , 'carte_de_visite' , 'bâche_numérique' ];

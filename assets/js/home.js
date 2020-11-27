@@ -64,7 +64,7 @@ window.onload = function () {
             }
         }
 
-console.log(elements);
+// console.log(elements);
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
