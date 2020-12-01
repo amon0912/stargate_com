@@ -14,11 +14,11 @@
                     <img src="assets/images/video.png" class="" width="32" height="32" alt="">
                 </div>
                 <form action="" method="post" class="d-flex">
-                    <div class="form-group" style="">
+                    <div class="form-group">
                         <input style="border-radius:20px;" type="text" class="form-control shadow border-0"
                             id="exampleInput" placeholder="">
                     </div>
-                    <div class="ml-2 mr-2 form-group" style="">
+                    <div class="ml-2 mr-2 form-group">
                         <input style="border-radius:20px;"
                             class="form-control shadow border-0 text-center kArriere-plan text-white" type="submit"
                             value="Rechercher">
