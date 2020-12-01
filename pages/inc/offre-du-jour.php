@@ -6,7 +6,7 @@
     foreach ($offres as $keyOffres => $valueOffres) {
         if($valueOffres != '.' && $valueOffres != '..'){ ?>
         <div>
-            <a class="text-decoration-none" href="?p=je-profite-de-loffre&offre=<?= $valueOffres ?>">
+            <a class="text-decoration-none" href="?p=#e-profite-de-loffre&offre=<?= $valueOffres ?>">
                 <p class="text-center">
                     <img src="assets/images/offres/<?= $valueOffres ?>" class="img-fluid kArrondir h-100 w-100" style=""
                         alt="image offre">
@@ -14,7 +14,7 @@
             </a>
 
             <div class="float-right shadow-sm kArrondir border bg-body pr-3 pl-3 pt-1 pb-1 mt-2">
-                <a href="?p=je-profite-de-loffre&offre=<?= $valueOffres ?>" class="text-decoration-none kColor-text">
+                <a href="?p=#e-profite-de-loffre&offre=<?= $valueOffres ?>" class="text-decoration-none kColor-text">
                     Je profite
                 </a>
             </div>

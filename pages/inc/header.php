@@ -18,7 +18,7 @@
                         <input style="border-radius:20px;" type="text" class="form-control shadow border-0"
                             id="exampleInput" placeholder="">
                     </div>
-                    <div class="ml-2 mr-2 form-group" style="≈">
+                    <div class="ml-2 mr-2 form-group" style="">
                         <input style="border-radius:20px;"
                             class="form-control shadow border-0 text-center kArriere-plan text-white" type="submit"
                             value="Rechercher">
@@ -30,10 +30,10 @@
                                 aria-expanded="false">
                                 <img src="assets/images/besk.png" class="" width="32" height="32" alt="">
                             </div>
-                            <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
+                            <!-- <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover"
-                                        href="?p=voir-votre-panier">Voir votre
+                                        href="?p=#1voir-votre-panier">Voir votre
                                         panier</a>
                                 </li>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center">
@@ -43,7 +43,7 @@
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover" href="#">Ajouter de
                                         l'argent</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                     <div class="m-1">
@@ -57,7 +57,7 @@
 
                             <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
 
-                                <?php if(true){ ?>
+                                <?php if(!true){ ?>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover" href="?p=mon-compte">Mon
                                         Compte</a>
@@ -87,7 +87,7 @@
                                 <hr>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover"
-                                        href="?p=inscription">Inscription</a>
+                                        href="?p=#inscription">Inscription</a>
                                 </li>
                                 <?php } ?>
                             </ul>
@@ -103,7 +103,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="modalConnexion" tabindex="-1" aria-labelledby="modalConnexion-id" aria-hidden="true">
+<div class="modal fade" id="#modalConnexion" tabindex="-1" aria-labelledby="modalConnexion-id" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content kArrondir kArriere-plan-gris">
             <div class="modal-header">

@@ -75,7 +75,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary text-white kArrondir"
                     data-dismiss="modal">Fermer</button>
-                <a href="?p=demander-devis">
+                <a href="?p=#1emander-devis">
                     <button type="button" class="btn kArriere-plan text-white kArrondir">Demander un devis</button>
                 </a>
             </div>
@@ -146,7 +146,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary text-white kArrondir"
                     data-dismiss="modal">Fermer</button>
-                <a href="?p=demander-devis">
+                <a href="?p=#1emander-devis">
                     <button type="button" class="btn kArriere-plan text-white kArrondir">Demander un devis</button>
                 </a>
             </div>
