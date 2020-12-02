@@ -1,22 +1,24 @@
 <?php
+include('../config/db.php');
 
 $err = 0;
 $msg = "";
 
 if (!empty($_POST['nom']) && !empty($_POST['prenoms']) && !empty($_POST['email']) && !empty($_POST['numero']) && !empty($_POST['mdp']) ) {
+
     $nom= trim(strip_tags($_POST['nom']));
     $prenoms = trim(strip_tags($_POST['prenoms']));
     $email = trim(strip_tags($_POST['email']));
     $numero= trim(strip_tags($_POST['numero']));
     $mdp = trim(strip_tags($_POST['mdp']));
     
-    if ( strlen($nom) < 2) {
+    if ( strlen($nom) < 2 ) {
         $err = 0;
         $msg = "Nom trop court";
-    }  else if ( strlen($prenoms) < 2) {
+    } else if ( strlen($prenoms) < 2) {
         $err = 0;
         $msg = "Prénoms trop court";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    }  else if ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
         $err = 0;
         $msg = "E-mail incorrect";
     } else if ( !is_numeric($numero) || strlen($numero) < 8 ) {
@@ -24,10 +26,16 @@ if (!empty($_POST['nom']) && !empty($_POST['prenoms']) && !empty($_POST['email']
         $msg = "Numéro incorrect";
     } else if ( strlen($mdp) < 8) {
         $err = 0;
-        $msg = "Prénoms trop court";
+        $msg = "Mot de passe trop court";
     } else {
+        $id = md5(uniqid());
+        $token = md5(uniqid(rand(), true));
+        $hash = password_hash($mdp, PASSWORD_DEFAULT);
         $err = 0;
-        $msg = "";
+        $msg = 'ok';
+
+        $q = $db->prepare('insert into client (	id_client, nom_client, prenom_client, email_client, numero_whatsapp_client, mdp_client, token_client, createdAt_client) values (?,?,?,?,?,?,?,now()');
+        $q->execute([$id, $nom, $prenoms, $email, $numero, $token, $hash]);
     }
     
 } else {
