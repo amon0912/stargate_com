@@ -79,6 +79,7 @@
     <script src="assets/js/menu-caro.js"></script>
 
 
+    <script src="assets/js/<?= $p ?>.js"></script>
     <?php
     if ($p === 'home') { ?>
 

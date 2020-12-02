@@ -87,7 +87,7 @@
                                 <hr>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover"
-                                        href="?p=#inscription">Inscription</a>
+                                        href="?p=inscription">Inscription</a>
                                 </li>
                                 <?php } ?>
                             </ul>

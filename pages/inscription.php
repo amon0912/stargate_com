@@ -13,29 +13,30 @@
                 <p>
                     <img class="img-fluid" src="assets/images/inscription.png" alt="">
                 </p>
-                <form>
+                <div id="msg" class="m-5"> </div>
+                <form id="form">
                     <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Nom">
+                        <input type="text" class="form-control kArrondir shadow" placeholder="Nom" name="nom">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Prénoms">
+                        <input type="text" class="form-control kArrondir shadow" placeholder="Prénoms" name="prenoms">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="email" class="form-control kArrondir shadow" placeholder="Email">
+                        <input type="email" class="form-control kArrondir shadow" placeholder="Email" name="email">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="tel" class="form-control kArrondir shadow" placeholder="Numéro whatsapp">
+                        <input type="tel" class="form-control kArrondir shadow" placeholder="Numéro whatsapp"
+                            name="numero">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Mot de passe">
+                        <input type="text" class="form-control kArrondir shadow" placeholder="Mot de passe" name="mdp">
                     </div>
-                    <div class="form-group mb-3 justify-content-end float-right">
-                        <input type="submit" style=""
-                            class="form-control  kArrondir shadow border d-block text-white kArriere-plan"
+                    <div class=" mb-3 justify-content-end float-right">
+                        <input type="submit" class=" kArriere-plan kArrondir border-0 p-2 pr-4 pl-4"
                             value="Je m'inscris">
                     </div>
 
