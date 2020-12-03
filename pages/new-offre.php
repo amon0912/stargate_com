@@ -16,7 +16,7 @@
             foreach ($kOffres as $keykOffres=> $valuekOffres) {
                 if($valuekOffres != '.' && $valuekOffres != '..'){ ?>
                 <div class="col-md-4 mb-3">
-                    <div class="card kArrondir" style="width: 18rem;">
+                    <div class="card kArrondir" style="width: 100%;">
                         <img src="assets/images/offres/<?= $valuekOffres ?>" class="card-img-top kArrondir img-fluid"
                             alt="...">
                         <div class="card-body">
@@ -38,7 +38,7 @@
             foreach ($kFormations as $keykFormations=> $valuekFormations) {
                 if($valuekFormations != '.' && $valuekFormations != '..'){ ?>
                 <div class="col-md-4 mb-3 ">
-                    <div class="card kArrondir" style="width: 18rem;">
+                    <div class="card kArrondir" style="width: 100%;">
                         <img src="assets/images/formations/<?= $valuekFormations ?>"
                             class="card-img-top kArrondir img-fluid" alt="...">
                         <div class="card-body">

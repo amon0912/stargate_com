@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /config
+Disallow: /espace-admin
+Sitemap: https://ivoiredecoplus.com/sitemap.xml

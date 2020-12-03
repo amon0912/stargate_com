@@ -39,7 +39,7 @@ if (!empty($_GET['p']) && $_GET['p']=='je-profite-de-loffre' && !empty($_GET['of
                     </div>
 
                     <div class="form-group mb-3 justify-content-end float-right">
-                        <input type="submit" style=""
+                        <input type="submit" 
                             class="form-control  kArrondir shadow border d-block text-white kArriere-plan"
                             value="Je m'inscris">
                     </div>

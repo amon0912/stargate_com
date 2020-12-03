@@ -23,7 +23,7 @@ form.addEventListener('submit', function (e) {
     }
 
 
-    xhr.open('POST', 'traitement/kInscription.php', true);
+    xhr.open('POST', 'traitement/kConnexion.php', true);
     xhr.responseType = 'json';
     xhr.send(data);
 });

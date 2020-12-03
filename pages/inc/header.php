@@ -57,11 +57,11 @@
 
                             <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
 
-                                <?php if(!true){ ?>
+                                <?php if(!empty($_SESSION['kid'])){ ?>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover" href="?p=mon-compte">Mon
                                         Compte</a>
-                                </li>
+                                </li> 
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center">
                                     <a class="dropdown-item kArrondir text-white kHover"
                                         href="?p=boite-de-reception">Boîte
@@ -74,7 +74,7 @@
                                 </li>
                                 <hr>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
-                                        class="dropdown-item kArrondir text-white kHover" href="#">Déconnexion</a>
+                                        class="dropdown-item kArrondir text-white kHover" href="?p=deconnexion">Déconnexion</a>
                                 </li>
 
                                 <?php } else { ?>
@@ -103,7 +103,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="#modalConnexion" tabindex="-1" aria-labelledby="modalConnexion-id" aria-hidden="true">
+<div class="modal fade" id="modalConnexion" tabindex="-1" aria-labelledby="modalConnexion-id" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content kArrondir kArriere-plan-gris">
             <div class="modal-header">
@@ -114,21 +114,22 @@
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="">
+                <div id="msg"></div>
+                <form id='form'>
                     <div class="form-group">
                         <div class="form-group mb-3">
-                            <input type="text" class="form-control kArrondir shadow" placeholder="Email ou numéro">
+                            <input type="text" class="form-control kArrondir shadow" placeholder="Email ou numéro" name="login">
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="password" class="form-control kArrondir shadow" placeholder="Mot de passe">
+                            <input type="password" class="form-control kArrondir shadow" placeholder="Mot de passe" name="mdp">
                         </div>
                     </div>
 
                     <div class="float-right">
                         <button type="button" class="btn btn-outline-danger kArrondir"
                             data-dismiss="modal">Quitter</button>
-                        <input type="button" class="btn kArriere-plan kArrondir" value="Connection">
+                        <input type="submit" class="btn kArriere-plan kArrondir" value="Connection">
                     </div>
                 </form>
             </div>

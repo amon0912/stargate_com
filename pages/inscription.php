@@ -28,16 +28,14 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="tel" class="form-control kArrondir shadow" placeholder="Numéro whatsapp"
-                            name="numero">
+                        <input type="tel" class="form-control kArrondir shadow" placeholder="Numéro whatsapp" name="numero">
                     </div>
 
                     <div class="form-group mb-3">
                         <input type="text" class="form-control kArrondir shadow" placeholder="Mot de passe" name="mdp">
                     </div>
                     <div class=" mb-3 justify-content-end float-right">
-                        <input type="submit" class=" kArriere-plan kArrondir border-0 p-2 pr-4 pl-4"
-                            value="Je m'inscris">
+                        <input type="submit" class=" kArriere-plan kArrondir border-0 p-2 pr-4 pl-4" value="Je m'inscris">
                     </div>
 
                 </form>
