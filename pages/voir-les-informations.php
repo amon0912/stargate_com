@@ -1,3 +1,6 @@
+<?php
+if (!empty($_SESSION['kid'])) { ?>
+
 <div class="container-fluid mt-2">
     <div class="row my-5">
         <div class="col-md-3">
@@ -15,18 +18,18 @@
                         Vos informations
                     </div>
                 </div>
-                <div>
+                <div class=" text-capitalize">
                     <div class="shadow mb-3 pl-4 pr-4 p-2 border kColor-text bg-white kArrondir">
-                        Nom:
+                        Nom: <?= $_SESSION['knom'] ?>
                     </div>
                     <div class="shadow mb-3 pl-4 pr-4 p-2 border kArrondir kColor-text bg-white">
-                        Prénoms:
+                        Prénoms: <?= $_SESSION['kprenom'] ?>
                     </div>
                     <div class="shadow mb-3 pl-4 pr-4 p-2 border kArrondir kColor-text bg-white">
-                        Email:
+                        Email: <?= $_SESSION['kemail'] ?>
                     </div>
                     <div class="shadow mb-3 pl-4 pr-4 p-2 border kArrondir kColor-text bg-white">
-                        Contact:
+                        Contact: <?= $_SESSION['knumero'] ?>
                     </div>
                 </div>
             </div>
@@ -34,3 +37,8 @@
         <div class="col-md-3"></div>
     </div>
 </div>
+
+<?php } else {
+    # code...
+}
+?>

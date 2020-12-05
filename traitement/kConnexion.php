@@ -20,20 +20,27 @@ if (!empty($_POST['login']) && !empty($_POST['mdp'])) {
         if ($cpt) {
             while ($data = $verify->fetch(PDO::FETCH_ASSOC)) {
                 $kpass = $data['mdp_client'];
-                $ktoken=$data['token_client'];
+                $ktoken = $data['token_client'];
                 $kid = $data['id_client'];
                 $knom = $data['nom_client'];
                 $kprenom = $data['prenom_client'];
-            } 
+                $kemail = $data['email_client'];
+                $knumero = $data['numero_client'];
+            }
 
-            if($ktoken != 'null'){
+            if ($ktoken != 'null') {
                 $err = 0;
                 $msg = "Confirmez votre compte par email avant de vous connectez";
-            } else{
+            } else {
                 if (password_verify($mdp, $kpass)) {
                     $err = 1;
                     $_SESSION['kid'] = $kid;
                     $_SESSION['knom'] = $knom;
+                    $_SESSION['kprenom'] = $kprenom;
+                    $_SESSION['kemail'] = $kemail;
+                    $_SESSION['knumero'] = $knumero;
+
+
                     $msg = '<div class="spinner-border text-success" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>';
@@ -55,20 +62,26 @@ if (!empty($_POST['login']) && !empty($_POST['mdp'])) {
         if ($cpt) {
             while ($data = $verify->fetch(PDO::FETCH_ASSOC)) {
                 $kpass = $data['mdp_client'];
-                $ktoken=$data['token_client'];
+                $ktoken = $data['token_client'];
                 $kid = $data['id_client'];
                 $knom = $data['nom_client'];
                 $kprenom = $data['prenom_client'];
+                $kemail = $data['email_client'];
+                $knumero = $data['numero_client'];
             }
 
-            if($ktoken != ''){
+            if ($ktoken != '') {
                 $err = 0;
                 $msg = "Confirmez votre compte par email avant de vous connectez";
-            } else{
+            } else {
                 if (password_verify($mdp, $kpass)) {
-                    $err = 1;
                     $_SESSION['kid'] = $kid;
                     $_SESSION['knom'] = $knom;
+                    $_SESSION['kprenom'] = $kprenom;
+                    $_SESSION['kemail'] = $kemail;
+                    $_SESSION['knumero'] = $knumero;
+
+                    $err = 1;
                     $msg = '<div class="spinner-border text-success" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>';

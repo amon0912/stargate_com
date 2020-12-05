@@ -1,3 +1,6 @@
+<?php
+if (!empty($_SESSION['kid'])) { ?>
+
 <div class="container-fluid mt-2">
     <div class="row my-5">
         <div class="col-md-3">
@@ -15,24 +18,22 @@
                         Modifier vos informations
                     </div>
                 </div>
-                <form>
-
+                <div id="msg">
+                </div>
+                <form id="form">
+                    <input hidden type="text" name="id" value="<?= $_SESSION['kid'] ?>">
                     <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Ancien mot de passe">
+                        <input type="text" class="form-control kArrondir shadow" placeholder="Ancien mot de passe"
+                            name="old-mdp">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Nouveau mot de passe">
+                        <input type="text" class="form-control kArrondir shadow" placeholder="Nouveau mot de passe"
+                            name="new-mdp">
                     </div>
 
-                    <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Retapez le mot de passe">
-                    </div>
-
-                    <div class="form-group mb-3 float-right">
-                        <input type="submit" style=""
-                            class="form-control  kArrondir shadow border d-block text-white kArriere-plan"
-                            value="Terminer">
+                    <div class=" mb-3 justify-content-end float-right">
+                        <input type="submit" class=" kArriere-plan kArrondir border-0 p-2 pr-4 pl-4" value="Modifiez">
                     </div>
 
                 </form>
@@ -41,3 +42,8 @@
         <div class="col-md-3"></div>
     </div>
 </div>
+
+<?php } else {
+    # code...
+}
+?>

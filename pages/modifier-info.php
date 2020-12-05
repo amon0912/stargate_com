@@ -1,3 +1,6 @@
+<?php
+if (!empty($_SESSION['kid'])) { ?>
+
 <div class="container-fluid mt-2">
     <div class="row my-5">
         <div class="col-md-3">
@@ -15,30 +18,31 @@
                         Modifier vos informations
                     </div>
                 </div>
-                <form>
+                <div id="msg"></div>
+                <form id="form">
+                    <input hidden type="text" name="id" value="<?= $_SESSION['kid'] ?>">
                     <div class=" form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Nom">
+                        <input type="text" class="form-control kArrondir shadow" placeholder="Nom" name="nom"
+                            value="<?= $_SESSION['knom'] ?>">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Prénoms">
+                        <input type="text" class="form-control kArrondir shadow" placeholder="Prénoms" name="prenom"
+                            value="<?= $_SESSION['kprenom'] ?>">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="email" class="form-control kArrondir shadow" placeholder="Email">
+                        <input type="email" class="form-control kArrondir shadow " placeholder="Email" name="email"
+                            value="<?= $_SESSION['kemail'] ?>">
                     </div>
 
                     <div class="form-group mb-3">
-                        <input type="tel" class="form-control kArrondir shadow" placeholder="Numéro whatsapp">
+                        <input type="tel" class="form-control kArrondir shadow" placeholder="Numéro whatsapp"
+                            name="numero" value="<?= $_SESSION['knumero'] ?>">
                     </div>
 
-                    <div class="form-group mb-3">
-                        <input type="text" class="form-control kArrondir shadow" placeholder="Mot de passe">
-                    </div>
-                    <div class="form-group mb-3 float-right">
-                        <input type="submit" style=""
-                            class="form-control  kArrondir shadow border d-block text-white kArriere-plan"
-                            value="Terminer">
+                    <div class=" mb-3 justify-content-end float-right">
+                        <input type="submit" class=" kArriere-plan kArrondir border-0 p-2 pr-4 pl-4" value="Modifiez">
                     </div>
 
                 </form>
@@ -47,3 +51,8 @@
         <div class="col-md-3"></div>
     </div>
 </div>
+
+<?php } else {
+    # code...
+}
+?>

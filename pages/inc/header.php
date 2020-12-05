@@ -28,7 +28,8 @@
                         <div class="dropdown _dropleft">
                             <div class="dropdown-toggled" type="" id="dropdownMenuButton" data-toggle="dropdown"
                                 aria-expanded="false">
-                                <img src="assets/images/besk.png" class="" width="32" height="32" alt="">
+                                <img src="assets/images/besk.png" class="" width="32" height="32" alt=""><span
+                                    id="nbreAjout">0</span>
                             </div>
                             <!-- <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
@@ -61,7 +62,7 @@
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover" href="?p=mon-compte">Mon
                                         Compte</a>
-                                </li> 
+                                </li>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center">
                                     <a class="dropdown-item kArrondir text-white kHover"
                                         href="?p=boite-de-reception">Boîte
@@ -74,7 +75,8 @@
                                 </li>
                                 <hr>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
-                                        class="dropdown-item kArrondir text-white kHover" href="?p=deconnexion">Déconnexion</a>
+                                        class="dropdown-item kArrondir text-white kHover"
+                                        href="?p=deconnexion">Déconnexion</a>
                                 </li>
 
                                 <?php } else { ?>
@@ -118,11 +120,13 @@
                 <form id='form'>
                     <div class="form-group">
                         <div class="form-group mb-3">
-                            <input type="text" class="form-control kArrondir shadow" placeholder="Email ou numéro" name="login">
+                            <input type="text" class="form-control kArrondir shadow" placeholder="Email ou numéro"
+                                autofocus name="login">
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="password" class="form-control kArrondir shadow" placeholder="Mot de passe" name="mdp">
+                            <input type="password" class="form-control kArrondir shadow" placeholder="Mot de passe"
+                                name="mdp">
                         </div>
                     </div>
 
