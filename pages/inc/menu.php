@@ -2,7 +2,7 @@
     <div class="menu-caro d-flex">
         <a class="kBoutton-menu text-decoration-none" href="?p=home">
             <p class="text-center pt-2">
-                <img src="assets/images/icon-menu/new-welcome.png" class="img-fluid kArrondir h-100 w-100" style=""
+                <img src="assets/images/icon-menu/new-welcome.png" class="img-fluid kArrondir h-100 w-100"
                     alt="icon menu">
             </p>
         </a>

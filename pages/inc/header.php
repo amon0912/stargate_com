@@ -10,6 +10,13 @@
 
         <div class="d-flex justify-content-evenly col-md-9">
             <div class="d-flex">
+
+                <?php if (!empty($_SESSION['kid'])) { ?>
+                <div class="m-1 font-weight-bold text-capitalize">
+                    Salut <?= $_SESSION['knom'] ?>
+                </div>
+                <?php } ?>
+
                 <div class="m-1 ">
                     <img src="assets/images/video.png" class="" width="32" height="32" alt="">
                 </div>
@@ -31,7 +38,8 @@
                                 <img src="assets/images/besk.png" class="" width="32" height="32" alt=""><span
                                     id="nbreAjout">0</span>
                             </div>
-                            <!-- <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
+                            <?php if (!empty($_SESSION['kid'])) { ?>
+                            <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover"
                                         href="?p=#1voir-votre-panier">Voir votre
@@ -44,7 +52,9 @@
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover" href="#">Ajouter de
                                         l'argent</a></li>
-                            </ul> -->
+                            </ul>
+                            <?php } ?>
+
                         </div>
                     </div>
                     <div class="m-1">
@@ -58,7 +68,7 @@
 
                             <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
 
-                                <?php if(!empty($_SESSION['kid'])){ ?>
+                                <?php if (!empty($_SESSION['kid'])) { ?>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover" href="?p=mon-compte">Mon
                                         Compte</a>

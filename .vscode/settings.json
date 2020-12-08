@@ -1,3 +1,18 @@
 {
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "stargate",
+            "database": "db_stargate",
+            "username": "root",
+            "password": ""
+        }
+    ]
 }
