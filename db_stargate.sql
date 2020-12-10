@@ -49,17 +49,16 @@ DROP TABLE IF EXISTS `client`;
 CREATE TABLE IF NOT EXISTS `client` (
   `id_client` varchar(50) NOT NULL,
   `id` varchar(50) NOT NULL,
-  `idDemand` varchar(50) NOT NULL,
   `nom_client` varchar(50) NOT NULL,
   `prenom_client` varchar(50) NOT NULL,
   `email_client` varchar(225) NOT NULL,
-  `numero_whatsapp_client` varchar(50) NOT NULL,
+  `numero_client` varchar(50) NOT NULL,
   `mdp_client` varchar(225) NOT NULL,
   `token_client` varchar(225) NOT NULL,
   `createdAt_client` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_client`),
-  UNIQUE KEY `numero_whatsapp_client` (`numero_whatsapp_client`),
-  UNIQUE KEY `mdp_client` (`mdp_client`),
+  UNIQUE KEY `numero_client` (`numero_client`),
+  UNIQUE KEY `email_client` (`email_client`),
   KEY `fk_id_admin` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -40,7 +40,7 @@
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://stargatecommunication.com/" />
-
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </head>
 
 <body>
@@ -71,7 +71,7 @@
 
 
     <?php
-    if ($p === 'home' || $p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' || $p === 'detail-print' || $p === 'detail-realisation' || $p === 'new-marketing-digital') { ?>
+    if ($p === 'home' || $p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' || $p === 'detail-print' || $p === 'detail-realisation' || $p === 'detail-formation' || $p === 'new-marketing-digital') { ?>
     <!-- en tete -->
     <?php include('pages/inc/header.php') ?>
 
@@ -117,7 +117,7 @@
     <script src="assets/js/<?= $p ?>.js"></script>
     <script src="assets/js/caro-offres-et-formations.js"></script>
 
-    <?php } else if ($p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' || $p === 'detail-print' || $p === 'detail-realisation' || $p === 'new-marketing-digital') { ?>
+    <?php } else if ($p === 'new-developpement' || $p === 'new-print' || $p === 'new-offre' || $p === 'new-formation' || $p === 'new-nos-realisations' || $p === 'detail-print' || $p === 'detail-realisation' || $p === 'detail-formation' || $p === 'new-marketing-digital') { ?>
     <script src="assets/js/connexion.js"></script>;
     <script src="assets/js/caro-offres-et-formations.js"></script>
 

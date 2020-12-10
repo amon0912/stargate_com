@@ -11,47 +11,63 @@
         <div class="col-md-9 mt-3" id="new-offre">
             <div class="row">
                 <?php
-            $kOffres = scandir('assets/images/offres', 1);
-            $kFormations = scandir('assets/images/formations', 1);
-            foreach ($kOffres as $keykOffres=> $valuekOffres) {
-                if($valuekOffres != '.' && $valuekOffres != '..'){ ?>
+                include('config/db.php');
+
+                //  $idFormation = trim(strip_tags($_GET['formation']));
+                //  $search="%$idFormation%";
+
+                $q1 = $db->prepare("SELECT * FROM offre ");
+                $q1->execute();
+                $cpt1 = $q1->rowCount();
+
+                if ($cpt1) {
+                    while ($d = $q1->fetch(PDO::FETCH_ASSOC)) {
+                        $dataOffre[] = $d;
+                    }
+
+                    foreach ($dataOffre as $item) { ?>
+
                 <div class="col-md-4 mb-3">
                     <div class="card kArrondir" style="width: 100%;">
-                        <img src="assets/images/offres/<?= $valuekOffres ?>" class="card-img-top kArrondir img-fluid"
-                            alt="...">
+                        <img src="assets/images/uploads/<?= $item['lienImage'] ?>"
+                            class="card-img-top kArrondir img-fluid" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Promo</h5>
-                            <p class="card-text">Spécial décembre 75% sur tous nos services</p>
-                            <a href="?p=#1e-profite-de-loffre&offre=<?= $valuekOffres ?>"
+                            <h5 class="card-title"><?= $item['titre'] ?></h5>
+                            <p class="card-text"><?= $item['description'] ?></p>
+                            <a href="?p=je-profite-de-loffre&offre=<?= $item['idOffre'] ?>"
                                 class=" btn kArrondir kArriere-plan text-white">Je profite de l'offre</a>
                         </div>
                     </div>
                 </div>
                 <?php }
-        } 
-         ?>
+                }
+                ?>
+                <?php $q2 = $db->prepare("SELECT * FROM formation ");
+                $q2->execute();
+                $cpt2 = $q2->rowCount();
 
+                if ($cpt2) {
+                    while ($d2 = $q2->fetch(PDO::FETCH_ASSOC)) {
+                        $dataOffre2[] = $d2;
+                    }
 
-                <?php
+                    foreach ($dataOffre2 as $item2) { ?>
 
-            $kFormations = scandir('assets/images/formations', 1);
-            foreach ($kFormations as $keykFormations=> $valuekFormations) {
-                if($valuekFormations != '.' && $valuekFormations != '..'){ ?>
-                <div class="col-md-4 mb-3 ">
+                <div class="col-md-4 mb-3">
                     <div class="card kArrondir" style="width: 100%;">
-                        <img src="assets/images/formations/<?= $valuekFormations ?>"
+                        <img src="assets/images/uploads/<?= $item2['lienImage'] ?>"
                             class="card-img-top kArrondir img-fluid" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Formation</h5>
-                            <p class="card-text">Spécial décembre 75% sur toutes nos formations</p>
-                            <a href="?p=#1e-profite-de-la-formation&formation=<?= $valuekFormations ?>"
-                                class=" btn kArrondir kArriere-plan text-white">Participer</a>
+                            <h5 class="card-title"><?= $item2['titre'] ?></h5>
+                            <p class="card-text"><?= $item2['description'] ?></p>
+                            <a href="?p=je-profite-de-la-formation&formation=<?= $item2['idFormation'] ?>"
+                                class=" btn kArrondir kArriere-plan text-white">Je profite de l'offre</a>
                         </div>
                     </div>
                 </div>
                 <?php }
-        } 
-         ?>
+                }
+                ?>
             </div>
         </div>
     </div>

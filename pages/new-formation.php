@@ -29,7 +29,7 @@
                                     <p class="card-text text-capitalize font-weight-bold">
                                         <?= str_replace('_',' ', $item ); ?>
                                     </p>
-                                    <!-- <i class="fas fa-desktop fa-fw fa-3x "></i> -->
+
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
             <div class="modal-body text-white" style="text-align:justify ">
                 <div class="row">
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=web" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class=" card-title ">Formation web</h5>
                                 <p>
@@ -72,7 +72,7 @@
                     </div>
 
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=mobile" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class="card-title ">Formation Mobile</h5>
                                 <p>
@@ -105,7 +105,7 @@
             <div class="modal-body text-white" style="text-align:justify ">
                 <div class="row">
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=monatge" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class=" card-title ">Montage vidéo</h5>
                                 <p>
@@ -117,7 +117,7 @@
                     </div>
 
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=photoshop" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class="card-title ">Photoshop</h5>
                                 <p>
@@ -131,7 +131,7 @@
 
 
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=indesign" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class="card-title ">Indesign</h5>
                                 <p>
@@ -143,7 +143,7 @@
                     </div>
 
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=illustrator" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class="card-title ">Illustrator</h5>
                                 <p>
@@ -176,7 +176,7 @@
             <div class="modal-body text-white" style="text-align:justify ">
                 <div class="row">
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=community" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class=" card-title ">Community management</h5>
                                 <p>
@@ -188,7 +188,7 @@
                     </div>
 
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=google" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class="card-title ">Google Ads</h5>
                                 <p>
@@ -200,7 +200,7 @@
                     </div>
 
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=facebook" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class="card-title ">Facebook Ads</h5>
                                 <p>
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class=" card-body text-center kHover kArrondir col-md-6">
-                        <a href="" class=" text-decoration-none text-white">
+                        <a href="?p=detail-formation&formation=youtube" class=" text-decoration-none text-white">
                             <div>
                                 <h5 class="card-title ">Youtube Ads</h5>
                                 <p>

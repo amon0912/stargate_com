@@ -26,7 +26,7 @@ if (!empty($_POST['titre']) && !empty($_POST['description']) && !empty($_POST['r
 
             move_uploaded_file($_FILES['lienImage']['tmp_name'], '../../assets/images/uploads/' . $lien);
             $msg = "L'envoi a bien été effectué !";
-            $err = 0;
+            $err = 1;
         }
     }
 } else {

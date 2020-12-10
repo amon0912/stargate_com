@@ -43,7 +43,7 @@ if (!empty($_POST['nom']) && !empty($_POST['prenoms']) && !empty($_POST['email']
             $q = $db->prepare(" INSERT INTO client (id_client, nom_client, prenom_client, email_client, numero_client, mdp_client, token_client) VALUES (?, ?, ?, ?, ?, ?, ?) ");
             $q->execute([$id, $nom, $prenoms, $email, $numero, $hash, $token]);
 
-            $url = 'http://localhost:4000/?p=confirmation-compte';
+            $url = 'https://stargatecommunication.com/?p=confirmation-compte';
             $lien = $url . '&token=' . $token;
 
             $message = '<div>

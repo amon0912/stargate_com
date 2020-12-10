@@ -35,14 +35,15 @@
                         <div class="dropdown _dropleft">
                             <div class="dropdown-toggled" type="" id="dropdownMenuButton" data-toggle="dropdown"
                                 aria-expanded="false">
-                                <img src="assets/images/besk.png" class="" width="32" height="32" alt=""><span
-                                    id="nbreAjout">0</span>
+                                <img src="assets/images/besk.png" class="" width="32" height="32" alt="">
+                                <!-- compteur -->
+                                <?php include('cptPanier.php'); ?>
                             </div>
                             <?php if (!empty($_SESSION['kid'])) { ?>
                             <ul class="dropdown-menu kArrondir kBg-drop" aria-labelledby="dropdownMenuButton">
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover"
-                                        href="?p=#1voir-votre-panier">Voir votre
+                                        href="?p=voir-votre-panier">Voir mon
                                         panier</a>
                                 </li>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center">

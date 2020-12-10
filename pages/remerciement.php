@@ -1,6 +1,9 @@
 <div class="container-fluid">
     <div class="row mt-3">
-        <div class="col-md-2">
+        <div class="col-md-3">
+            <a href="?p=home" class="text-decoration-none">
+                <button class="btn btn-block kArrondir kArriere-plan">Retour à la page d'accueil</button>
+            </a>
 
         </div>
         <div class="col-md-4">
@@ -14,16 +17,16 @@
                     Votre de code réduction vous a été
                     Envoyé par mail.
                 </div>
-                <div class="d-flex justify-content-end">
+                <!-- <div class="d-flex justify-content-end">
                     <div>
                         <p class=" text-right" style="color:#3B5997; font-weight:bold;">Code non reçut ?</p>
                         <p class="border kArrondir bg-white kColor-text pr-4 pl-4 p-2">ENTRER NUMERO TELEPHONE</p>
                         <p class="btn border kArrondir bg-white kColor-text float-right text-primary">Recevoir</p>
                     </div>
                 </div>
+            </div> -->
             </div>
-        </div>
-        <div class="col-md-3">
+            <!-- <div class="col-md-3">
             <p class=" mt-5">
                 <img class="img-fluid kArrondir" src="assets/images/formations/offre-ADB.jpg" alt="">
             </p>
@@ -37,9 +40,9 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="col-md-2">
+        </div> -->
+            <div class="col-md-2">
 
+            </div>
         </div>
     </div>
-</div>
