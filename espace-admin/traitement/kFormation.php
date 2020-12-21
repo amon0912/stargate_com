@@ -1,10 +1,54 @@
 <?php session_start();
 include('../../config/db.php');
 
-
 $err = 0;
 $msg = 'Erreur de connexion au serveur';
-if (!empty($_POST['titre']) && !empty($_POST['description']) && !empty($_POST['reduction']) && !empty($_POST['idTypeFor'])) {
+
+if ( !empty($_POST['changeImage']) ) {
+    // modificartion avec ajout d'image
+    $idFormation = trim(strip_tags($_POST['idFormation']));
+    $titre = trim(strip_tags($_POST['titre']));
+    $description = trim(strip_tags($_POST['description']));
+    $reduction = trim(strip_tags($_POST['reduction']));
+    $idTypeFor = trim(strip_tags($_POST['idTypeFor']));
+    $oldLien = trim(strip_tags($_POST['old-lien']));
+    
+    if ($_FILES['lienImage']['error'] != 0) {
+        $err = 0;
+        $msg = 'ERREUR sur le fichier chargé';
+    } else {
+        $infosfichier = pathinfo($_FILES['lienImage']['name']);
+        $extension_upload = $infosfichier['extension'];
+        $extensions_autorisees = ['jpg', 'jpeg', 'gif', 'png'];
+        $lienodl = time() . '_' . basename($_FILES['lienImage']['name']);
+        $lien = str_replace(' ', '_', $lienodl);
+        $id = md5(time());
+        if (in_array($extension_upload, $extensions_autorisees)) {
+            // On peut valider le fichier et le stocker définitivement
+            $req = $db->prepare(" UPDATE formation SET idTypeFor = ?, titre = ?, description = ?, reduction = ?, lienImage = ? WHERE idFormation = ? ");
+            $req->execute([ $idTypeFor, $titre, $description, $reduction, $lien, $idFormation ]);
+            $err = 1;
+            $msg = 'Mise à jour éffectuée';
+
+            move_uploaded_file($_FILES['lienImage']['tmp_name'], '../../assets/images/uploads/' . $lien);
+
+            unlink('../../assets/images/uploads/' . $oldLien);
+        }
+    }
+} else if ( !empty($_POST['idFormation']) ) {
+    // modification sans ajout d'image
+    $idFormation = trim(strip_tags($_POST['idFormation']));
+    $titre = trim(strip_tags($_POST['titre']));
+    $description = trim(strip_tags($_POST['description']));
+    $reduction = trim(strip_tags($_POST['reduction']));
+    $idTypeFor = trim(strip_tags($_POST['idTypeFor']));
+    
+    $req = $db->prepare(" UPDATE formation SET idTypeFor = ?, titre = ?, description = ?, reduction = ? WHERE idFormation = ? ");
+    $req->execute([ $idTypeFor, $titre, $description, $reduction, $idFormation ]);
+    $err = 1;
+    $msg = 'Mise à jour éffectuée';
+
+} else if (!empty($_POST['titre']) && !empty($_POST['description']) && !empty($_POST['reduction']) && !empty($_POST['idTypeFor'])) {
     $titre = trim(strip_tags($_POST['titre']));
     $description = trim(strip_tags($_POST['description']));
     $reduction = trim(strip_tags($_POST['reduction']));

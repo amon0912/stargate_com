@@ -46,13 +46,13 @@
                                         href="?p=voir-votre-panier">Voir mon
                                         panier</a>
                                 </li>
-                                <li class="mt-1 mr-2 ml-2 mb-1 text-center">
+                                <!-- <li class="mt-1 mr-2 ml-2 mb-1 text-center">
                                     <a class="dropdown-item kArrondir text-white kHover" href="#">Modifier votre
                                         panier</a>
-                                </li>
-                                <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
+                                </li> -->
+                                <!-- <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover" href="#">Ajouter de
-                                        l'argent</a></li>
+                                        l'argent</a></li> -->
                             </ul>
                             <?php } ?>
 
@@ -82,7 +82,7 @@
                                 </li>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a
                                         class="dropdown-item kArrondir text-white kHover"
-                                        href="?p=affiliation">Affiliation</a>
+                                        href="?p=#affiliations">Affiliation</a>
                                 </li>
                                 <hr>
                                 <li class="mt-1 mr-2 ml-2 mb-1 text-center"><a

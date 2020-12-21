@@ -28,7 +28,7 @@ if (!empty($_POST['login']) && !empty($_POST['mdp'])) {
                 $knumero = $data['numero_client'];
             }
 
-            if ($ktoken != 'null') {
+            if ($ktoken != '') {
                 $err = 0;
                 $msg = "Confirmez votre compte par email avant de vous connectez";
             } else {

@@ -1,3 +1,4 @@
+<?php if(!empty($_SESSION['kid'])){ ?>
 <div class="container-fluid mt-2">
     <div class="row my-5">
         <div class="col-md-3">
@@ -16,23 +17,37 @@
                     </div>
                 </div> -->
                 <div>
-                    <h3 class="text-white">Titre du message</h3>
+                    <?php
+                    include('config/db.php');
+                    if(!empty($_GET['msg'])){
+                        $idMsg=$_GET['msg'];
+                        $q=$db->prepare(" SELECT titreMsg, corpsMsg FROM message WHERE idMsg = ? ");
+                        $q->execute([$idMsg]);
+                        $cpt=$q->rowCount();
+                        if($cpt){
+                            while($rep=$q->fetch(PDO::FETCH_ASSOC)){
+                                $data=$rep;
+                            } ?>
+                    <h3 class="text-white">
+                        <?= $data['titreMsg'] ?>
+                    </h3>
                     <p class=" kColor-text" style="text-align:justify">
-                        Corps du massage! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Deserunt aliquam numquam cumque voluptatibus ex id perspiciatis similique, voluptates a sit
-                        ratione, nostrum voluptas labore facilis quidem! Ipsa quis voluptatem delectus. Lorem ipsum
-                        dolor sit amet consectetur, adipisicing elit. Quisquam accusantium quasi corrupti quibusdam
-                        consequuntur! Rerum nam nisi quasi nemo nobis accusamus consequatur ratione dolor. Fugit ipsa ab
-                        consequuntur ullam impedit.
+                        <?= $data['corpsMsg'] ?>
                     </p>
                     <div class="float-right mb-3">
                         <a href="">
-                            <div class="btn kArriere-plan kArrondir pr-4 pl-4 text-white">Participer</div>
+                            <!-- <div class="btn kArriere-plan kArrondir pr-4 pl-4 text-white">Participer</div> -->
                         </a>
                     </div>
+                    <?php } else{
+                        echo '<p class="h2 text-center">Aucun Message</p>';
+                    }
+                    }   
+                    ?>
                 </div>
             </div>
         </div>
         <div class="col-md-3"></div>
     </div>
 </div>
+<?php } ?>

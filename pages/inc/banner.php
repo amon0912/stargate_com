@@ -3,7 +3,7 @@
 
         <!-- offre du jour  -->
         <div class="col-md-3 mt-3">
-            <h3>Offre du jours</h3>
+            <h3>Offre du jour</h3>
             <?php include('offre-du-jour.php');?>
         </div>
 

@@ -11,10 +11,10 @@ if (!empty($_POST['id']) && !empty($_POST['old-mdp']) && !empty($_POST['new-mdp'
     $old_mdp = trim(strip_tags($_POST['old-mdp']));
     $new_mdp = trim(strip_tags($_POST['new-mdp']));
 
-    if (!is_numeric($old_mdp) || strlen($old_mdp) < 8) {
+    if ( strlen($old_mdp) < 8) {
         $err = 0;
         $msg = "Mot de passe d'au moin 8 caractère";
-    } else if (!is_numeric($new_mdp) || strlen($new_mdp) < 8) {
+    } else if ( strlen($new_mdp) < 8) {
         $err = 0;
         $msg = "Mot de passe d'au moin 8 caractère";
     } else {
@@ -26,8 +26,9 @@ if (!empty($_POST['id']) && !empty($_POST['old-mdp']) && !empty($_POST['new-mdp'
                 $hash = $data['mdp_client'];
             }
             if (password_verify($old_mdp, $hash)) {
+                $hash_new= password_hash($new_mdp, PASSWORD_DEFAULT);
                 $q = $db->prepare("UPDATE client SET mdp_client = ? WHERE id_client = ?");
-                $q->execute([$new_mdp, $id]);
+                $q->execute([$hash_new, $id]);
                 $err = 1;
                 $msg = 'Modification du mot de passe terminée';
     
